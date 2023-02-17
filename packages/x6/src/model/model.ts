@@ -1082,6 +1082,10 @@ export class Model extends Basecoat<Model.EventArgs> {
     return Cell.getCellsBBox(cells, options)
   }
 
+  getCellBBox(cell: Cell) {
+    return this.getCellsBBox([cell])
+  }
+
   // #region search
 
   search(
