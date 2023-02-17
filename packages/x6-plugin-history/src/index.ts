@@ -19,6 +19,8 @@ export class History
   public model: Model
   public readonly options: History.CommonOptions
   public readonly validator: History.Validator
+  // The history stack has no length limit
+  // which may affect performance in some cases
   protected redoStack: History.Commands[]
   protected undoStack: History.Commands[]
   protected batchCommands: History.Command[] | null = null
